@@ -1,0 +1,12 @@
+[
+  {
+    "id": "usr_0f30c65622eb2174",
+    "username": "bwouno",
+    "password": {
+      "salt": "RITqQYFAut21N6NplmIgSg==",
+      "hash": "KbvdGXDKUBQJUWEWZaq1v/X/jEyvZ30jQYc6BajHa6i7XON/jNVph5ocBcGhZIhzDJhdVlsvnFnkvHAuYoNfIg=="
+    },
+    "role": "admin",
+    "createdAt": "2026-02-07T21:19:10.435Z"
+  }
+]

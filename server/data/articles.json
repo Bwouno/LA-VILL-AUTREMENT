@@ -1,0 +1,15 @@
+[
+  {
+    "id": "art_0001",
+    "title": "Réunion publique",
+    "slug": "reunion-publique",
+    "summary": "Venez échanger avec l'équipe sur les priorités pour la Ville-aux-Dames.",
+    "content": "Cette page est un exemple d'article.\n\nVous pouvez créer et publier vos évènements depuis /admin.",
+    "coverImageUrl": "/images/future.svg",
+    "status": "published",
+    "createdAt": "2026-02-01T10:00:00.000Z",
+    "updatedAt": "2026-02-01T10:00:00.000Z",
+    "publishedAt": "2026-02-01T10:00:00.000Z"
+  }
+]
+

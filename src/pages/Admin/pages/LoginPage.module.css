@@ -1,0 +1,99 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f3f6ff;
+  padding: 18px;
+}
+
+.card {
+  width: min(460px, 100%);
+  padding: 20px 20px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(31, 63, 122, 0.14);
+  box-shadow: var(--shadow-soft);
+}
+
+.title {
+  font-weight: 900;
+  color: var(--color-blue-900);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--color-muted);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.form {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--color-blue-900);
+}
+
+.input {
+  border-radius: 12px;
+  border: 1px solid rgba(31, 63, 122, 0.22);
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.button {
+  margin-top: 6px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background: var(--color-blue-900);
+  color: var(--color-white);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--color-blue-800);
+}
+
+.error {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(244, 67, 54, 0.28);
+  background: rgba(244, 67, 54, 0.1);
+  color: #7f1d1d;
+  font-weight: 800;
+  font-size: 12px;
+  text-align: center;
+}
+
+.hint {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--color-muted);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.hint code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  font-size: 11px;
+}
+

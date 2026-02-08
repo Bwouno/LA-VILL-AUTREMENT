@@ -1,0 +1,41 @@
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-white);
+}
+
+.top {
+  padding: 26px 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  min-height: 150px;
+}
+
+.icon {
+  max-width: 60%;
+  display: block;
+  justify-self: center;
+}
+
+.bottom {
+  background: var(--color-blue-100);
+  padding: 16px 18px;
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  margin: 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.25;
+  color: var(--color-blue-900);
+  font-family: Poppins;
+}

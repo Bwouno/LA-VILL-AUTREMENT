@@ -1,0 +1,8 @@
+node_modules
+dist
+.DS_Store
+
+# server runtime
+server/uploads
+server/data/sessions.json
+

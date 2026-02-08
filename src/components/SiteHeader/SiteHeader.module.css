@@ -1,0 +1,213 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  overflow: visible;
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.brand {
+  align-items: center;
+  width: calc(var(--header-height) - -5px);
+  height: calc(var(--header-height) - 7px);
+}
+
+.brandLogo {
+  width: 91%;
+  height: 99%;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 5vw, 115px);
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.navLink {
+  position: relative;
+  font-weight: 600;
+  color: var(--color-blue-900);
+  padding: 0 2px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  font-size: clamp(13px, 1.05vw, 16px);
+}
+
+.navLinkActive::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-blue-900);
+}
+
+.mobileToggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mobileToggle:focus-visible {
+  outline: 3px solid rgba(31, 63, 122, 0.35);
+  outline-offset: 2px;
+}
+
+.mobileBars {
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  background: var(--color-blue-900);
+  border-radius: 999px;
+  position: relative;
+}
+
+.mobileBars::before,
+.mobileBars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background: var(--color-blue-900);
+  border-radius: 999px;
+}
+
+.mobileBars::before {
+  top: -8px;
+}
+
+.mobileBars::after {
+  top: 8px;
+}
+
+.mobilePanel {
+  display: none;
+  border-top: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.mobilePanelInner {
+  padding: 14px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 0px) {
+  .brand {
+    display: inline-flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 861px) {
+  .brandLogo {
+    width: 91%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    gap: clamp(16px, 4vw, 72px);
+  }
+}
+
+@media (max-width: 860px) {
+  .inner {
+    gap: 10px;
+  }
+
+  .brand {
+    width: calc(var(--header-height) - 4px);
+    height: calc(var(--header-height) - 4px);
+  }
+
+  .navLink {
+    font-size: 15px;
+    padding: 10px 2px;
+    width: 13%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobilePanel {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 160ms ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .mobilePanelOpen {
+    max-height: 320px;
+  }
+
+  .navLinkActive::after {
+    bottom: -6px;
+  }
+
+  .brandLogo {
+    width: 99%;
+    height: 95%;
+  }
+}
+
+@media (max-width: 520px) {
+  .mobilePanelOpen {
+    max-height: 420px;
+  }
+
+  .mobilePanelInner {
+    padding: 12px 0 16px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobileToggle {
+    padding: 8px;
+  }
+
+  .mobileBars,
+  .mobileBars::before,
+  .mobileBars::after {
+    width: 24px;
+  }
+}
