@@ -8,13 +8,73 @@
   padding: 64px 0 44px;
 }
 
+.teamInner {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(360px, 48%) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(18px, 3vw, 38px);
+}
+
+.teamImage {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.teamContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 43px;
+}
+
+.teamText {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.55;
+}
+
+.teamList {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.teamList li + li {
+  margin-top: 10px;
+}
+
+.teamSlogan {
+  margin: clamp(36px, 6vw, 68px) auto 0;
+  max-width: min(860px, 100%);
+  font-size: clamp(18px, 2.6vw, 20px);
+  line-height: 1.35;
+  color: var(--color-blue-100);
+  font-weight: 800;
+  text-align: center;
+  font-family:
+    Prosto One,
+    sans-serif;
+}
+
 .title {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   font-weight: 900;
   text-align: center;
-  font-family: Prosto One, sans-serif;
+  font-family:
+    Prosto One,
+    sans-serif;
 }
 
 .subtitle {
@@ -36,19 +96,74 @@
   gap: 22px;
 }
 
-.card {
+.cardLink {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  perspective: 1400px;
+}
+
+.cardLink:focus-visible {
+  outline: 3px solid rgba(31, 63, 122, 0.35);
+  outline-offset: 3px;
+}
+
+.cardFlip {
+  position: relative;
+  min-height: clamp(340px, 36vw, 420px);
+  border-radius: var(--radius-lg);
+  transform-style: preserve-3d;
+  transition: transform 420ms ease;
+}
+
+.cardLink:hover .cardFlip,
+.cardLink:focus-visible .cardFlip,
+.cardLink:active .cardFlip {
+  transform: rotateY(180deg);
+}
+
+.cardFace {
+  position: absolute;
+  inset: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid rgba(31, 63, 122, 0.14);
   box-shadow: var(--shadow-soft);
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  display: grid;
+  grid-template-rows: 220px 1fr;
   background: var(--color-white);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background: var(--color-white);
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+.photoWrap {
+  height: 220px;
+  background: var(--color-blue-100);
 }
 
 .photo {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
-  background: var(--color-blue-100);
+}
+
+.backImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--color-white);
 }
 
 .cardBody {
@@ -75,7 +190,17 @@
   color: var(--color-text);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .cardFlip {
+    transition: none;
+  }
+}
+
 @media (max-width: 980px) {
+  .teamInner {
+    grid-template-columns: 1fr;
+  }
+
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
