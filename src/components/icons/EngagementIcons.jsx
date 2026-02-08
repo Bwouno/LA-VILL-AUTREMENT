@@ -1,7 +1,7 @@
 export function EarthIcon(props) {
   return (
     <img
-      src="/public/images/PLANET.png"
+      src="/public/branding/PLANET.png"
       alt="ECOLOGIE"
     />
   );
@@ -10,7 +10,7 @@ export function EarthIcon(props) {
 export function ShopIcon(props) {
   return (
     <img
-      src="/public/images/COMMERCE.png"
+      src="/public/branding/COMMERCE.png"
       alt="COMMERCE"
     />
   );
@@ -19,7 +19,7 @@ export function ShopIcon(props) {
 export function TownHallIcon(props) {
   return (
     <img
-      src="/public/images/MAIRIE.png"
+      src="/public/branding/MAIRIE.png"
       alt="MAIRIE"
     />
   );

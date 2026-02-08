@@ -57,7 +57,7 @@ export default function Home() {
             <div className={styles.futureInner}>
               <img
                 className={styles.futureImage}
-                src="/public/images/AVENIR.jpg"
+                src="/public/branding/AVENIR.jpg"
                 alt="AVENIR"
               />
 
@@ -81,7 +81,7 @@ export default function Home() {
             <h2 className="sectionTitle sectionTitle--onDark">Notre équipe</h2>
 
             <div className={styles.teamInner}>
-              <img className={styles.teamImage} src="/public/images/EQUIPE.jpg" alt="EQUIPE" />
+              <img className={styles.teamImage} src="/public/branding/EQUIPE.jpg" alt="EQUIPE" />
 
               <p className={styles.teamText}>
                 Rencontrez les visages engagés de la Vill&apos;Autrement, prêts à construire un avenir plus
@@ -119,7 +119,7 @@ export default function Home() {
 
             <img
               className={styles.electoralImage}
-              src="/public/images/ELECTION.png"
+              src="/public/branding/ELECTION.png"
               alt="ELECTION"
             />
           </div>

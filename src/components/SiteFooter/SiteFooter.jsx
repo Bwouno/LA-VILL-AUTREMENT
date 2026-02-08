@@ -4,7 +4,7 @@ import styles from './SiteFooter.module.css';
 function FacebookIcon(props) {
   return (
     <img
-      src="/public/images/facebook.png"
+      src="/public/branding/facebook.png"
       alt="FACEBOOK"
     />
   );
@@ -13,7 +13,7 @@ function FacebookIcon(props) {
 function InstagramIcon(props) {
   return (
     <img
-      src="/public/images/instagram.png"
+      src="/public/branding/instagram.png"
       alt="INSTAGRAM"
     />
   );

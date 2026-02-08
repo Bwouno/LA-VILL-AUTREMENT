@@ -7,7 +7,7 @@ const teamMembers = [
     name: 'Benoît LEVEUX',
     role: 'Tête de liste',
     bio: 'Présentation à compléter (nom, rôle, engagement, etc.).',
-    photo: '/images/BENOIT.png'
+    photo: '/branding/BENOIT.png'
   },
   {
     name: 'Membre 2',
